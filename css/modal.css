@@ -1,0 +1,140 @@
+.imgDiv {
+    float: left; 
+    text-align: center;
+}
+.mobileImg {
+    width:100%;
+    margin-top: 1rem;
+    margin-bottom: 1.6rem;
+}
+.myImg {
+    border-radius: 5px;
+    cursor: default;
+    transition: 0.3s;
+    width:90%; 
+    margin-right:15px;
+}
+.myImg:hover {
+    opacity: 1;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+    border-radius: 6px;
+    margin: auto;
+    display: block;
+    height: 80%;
+    border: 6px solid #fff;
+}
+/* Add Animation */
+.modal-content {
+    -webkit-animation-name: nozoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: nozoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.zoomText {
+    font-size: 12px; 
+    color: #000;
+    font-family: sans-serif;
+    margin: 1rem 0;
+}
+.modal-content {
+  width: 80%;
+  height: auto;
+  margin-top: 15%;
+}
+.for-large {
+    display: none;
+}
+.for-small {
+    display: block;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal-content {
+        height: 90%;
+        width: auto;
+        margin-top: 0;
+    }
+    .for-large {
+        display: inline;
+        float: left;
+        width: 36%;
+        margin-right: 1.2rem;
+    }
+    .for-small {
+        display: none;
+    }
+    .myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        cursor: zoom-in;
+        transition: 0.3s;
+        width:90%; 
+    }
+    .myImg:hover {
+        opacity: 0.7;
+    }
+    .modal-content {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+    .floatingImg {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 992px) {
+   .for-large {
+       width: 26%;
+    }
+}
